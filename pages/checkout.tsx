@@ -6,7 +6,7 @@ import Products from '@/components/Products'
 import Cart from '@/components/Cart'
 
 
-export default function Home() {
+export default function Checkout() {
   return (
     <Fragment>
       <Navbar />
