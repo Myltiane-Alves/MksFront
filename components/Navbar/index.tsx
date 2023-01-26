@@ -1,15 +1,32 @@
 import * as S from './styles';
 import { AiOutlineClose, AiOutlineAlignRight } from "react-icons/ai";
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import Link from 'next/link';
 import { MobileMenu } from './Mobile';
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from '@/services/store';
+import { totalPrice } from '@/featuresSlice/cartSlice';
+import { show } from '@/featuresSlice/sidebarCartSlice';
 
 export const Navbar: React.FC = () => {
+    const dispatch = useDispatch();
+    const countItems = useSelector((state: RootState) => state.cart.countItems);
+    const [itemAdd, setItemAdd] = useState(false);
     const [mobileMenu, setMobileMenu] = useState(false);
 
     const OpenMobileMenu = useCallback(() => {
         setMobileMenu(oldValue => !oldValue);
     }, []);
+
+    useEffect(() => {
+        dispatch(totalPrice());
+        if(!countItems) return;
+        setItemAdd(true);
+        setTimeout(() => {
+            setItemAdd(false);
+        }, 300);
+    }, [countItems]);
+
     return (
         <S.Container>
             <S.Content>
@@ -44,6 +61,7 @@ export const Navbar: React.FC = () => {
                                 <button
                                     type="button"
                                     className="btnCart"
+                                    onClick={() => dispatch(show())}
                                 >
                                     
                                     <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -51,7 +69,7 @@ export const Navbar: React.FC = () => {
                                     </svg>
 
                                     <span>
-                                      0
+                                      {countItems}
                                     </span>
                                 </button>
                             </div>

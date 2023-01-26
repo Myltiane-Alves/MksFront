@@ -91,27 +91,38 @@ export const Card = styled.div`
   
         border-end-end-radius: 8px;
         border-end-start-radius: 8px;
-        button {
-            background-color: #0F52BA;
-            height: auto;
-            border: none;
-            border-radius: 0px 0px 8px 8px;
-            padding: 7px;
-            a {
-                display: flex;
-                align-items: center;
-                font-weight: 600;
-                font-size: 14px;
-                line-height: 28px;
-                text-transform: uppercase;
-                color: #ffffff;
-                width: 100%;
-            }
-            .icon {
-                padding-right: 10px;
-                align-items: center;
-            }
+        
+    }
+    button {
+        all: unset;
+        cursor: pointer;
+        padding: 14px 0px;
+        gap: 22.4px;
+        background-color: #0F52BA;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        border-radius: 0px 0px 8px 8px;
+        border: none;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 28px;
+        text-transform: uppercase;
+        color: #ffffff;
+        .cart {
+            box-sizing: border-box;
+            display: inline-block;
+            overflow: hidden;
+            width: initial;
+            height: initial;
+            background: none;
+            opacity: 1;
+            border: 0px;
+            margin: 0px;
+            padding: 0px;
+            position: relative;
+            max-width: 100%;
         }
-
     }
 `;

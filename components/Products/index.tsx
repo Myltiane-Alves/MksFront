@@ -11,8 +11,6 @@ export default function Products(): ReactElement {
     const isLoading = useSelector((state: RootState) => state.products.isLoading);
     const dispatch = useDispatch<AppDispatch>();
    
-    
-
     useEffect(() => {
         dispatch(fetchProducts());
     }, []);

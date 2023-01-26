@@ -1,6 +1,5 @@
-import { CartItem } from "@/types/CartItem";
 import { Product } from "@/types/Product";
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice} from "@reduxjs/toolkit";
 
 const initialState: {
     countItems: number,
@@ -40,8 +39,12 @@ const cartSlice = createSlice({
         batchRemove(){
 
         },
-        toggleInclude(){
-
+        totalPrice: (state) =>{
+            let totalItemsPrice: number = 0;
+            state.totalItems.forEach((item) => {
+                totalItemsPrice += Number(item.price);
+            });
+            state.totalPrice = totalItemsPrice;
         },
     },
 });
@@ -52,7 +55,7 @@ export const {
     incrementQuantity,
     decrementQuantity,
     batchRemove,
-    toggleInclude,
+    totalPrice,
 } = cartSlice.actions;
 
 export default cartSlice.reducer;

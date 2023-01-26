@@ -5,6 +5,8 @@ import { Product } from '@/types/Product';
 import { ReactElement } from 'react';
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../featuresSlice/cartSlice";
+import Image from 'next/image';
+import shop from "../../assets/img/shopping-bag.svg";
 
 export default function CardProducts({
     product,
@@ -44,21 +46,24 @@ export default function CardProducts({
                 </div>
                 <div className="containerBtn">
                     
-                    <RiShoppingBag3Line 
-                        color="#fff" 
-                        className="icon"
-                        size={25}
-                    />
+                    
+                </div>
                     <button
                         type="button"
                         onClick={() => dispatch(addToCart(product))}
                     >      
-                        <Link href="">
-                            Comprar
-                        </Link>
+                       
+                        <Image 
+                            src={shop}
+                            alt="carrinho para adicionar compra"
+                            className="cart"
+                            width={100}
+                            height={20}
+                        />
+                        
+                        <span> Comprar</span> 
+                   
                     </button>
-                    
-                </div>
             </S.Card>
         </S.Container>
     )
