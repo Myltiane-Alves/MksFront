@@ -7,7 +7,7 @@ import { useDispatch } from "react-redux";
 import { addToCart } from "../../featuresSlice/cartSlice";
 
 export default function CardProducts({
-    product
+    product,
 }: {
     product: Product;
 }): ReactElement {

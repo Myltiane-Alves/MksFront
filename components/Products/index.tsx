@@ -9,16 +9,18 @@ export default function Products(): ReactElement {
     const products = useSelector((state: RootState) => state.products.allProducts);
     const isLoading = useSelector((state: RootState) => state.products.isLoading);
     const dispatch = useDispatch<AppDispatch>();
+   
+    
 
     useEffect(() => {
         dispatch(fetchProducts());
     }, []);
     
     return (
-        <Fragment>
+        <div>
             {products.map((product) => (
                 <CardProducts product={product} key={product.id} />
             ))}
-        </Fragment>
+        </div>
     )
 }
