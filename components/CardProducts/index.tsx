@@ -26,17 +26,21 @@ export default function CardProducts({
                 </div>
                 <div className="title">
                     <div className="text">
-                        <p>Apple Watch Series 4 GPS</p>
-                        {product.name}
+                    
+                        <p>
+                            {product.name}
+                        </p>
                     </div>
                     <div className="price">
-                        <span>R$399</span>
-                        {stringPrice}
+                        <span>
+                            {stringPrice}
+                        </span>
                     </div>
                 </div>
                 <div className="description">
-                    <p>Redesigned from scratch and completely revised.</p>
-                    {product.description}
+                    <p>
+                        {product.description}
+                    </p>
                 </div>
                 <div className="containerBtn">
                     

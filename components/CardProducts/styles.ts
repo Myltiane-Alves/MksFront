@@ -2,8 +2,12 @@ import styled from 'styled-components'
 
 export const Container = styled.main`
     background-color: #E5E5E5;
-    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     height: auto;
+    padding: 20px 0px 20px 0px;
+
    
 `;
 
@@ -12,6 +16,10 @@ export const Card = styled.div`
     border-radius:  8px;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.135216);
     width: 217px;
+    display: flex;
+    flex-direction: column;
+
+    
     .containerImg {
         /* display: flex; */
         /* background-color: #0F52BA; */
