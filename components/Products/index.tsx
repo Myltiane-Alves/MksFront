@@ -1,6 +1,8 @@
+import { fetchProducts } from "@/featuresSlice/productsSlice";
 import { AppDispatch, RootState } from "@/services/store";
 import { Fragment, ReactElement, useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
+import CardProducts from "../CardProducts";
 
 
 export default function Products(): ReactElement {
@@ -14,7 +16,9 @@ export default function Products(): ReactElement {
     
     return (
         <Fragment>
-
+            {products.map((product) => (
+                <CardProducts product={product} key={product.id} />
+            ))}
         </Fragment>
     )
 }
