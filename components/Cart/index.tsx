@@ -5,10 +5,25 @@ import { AiOutlineMinus } from "react-icons/ai";
 import { AiOutlinePlus } from "react-icons/ai";
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '@/services/store';
+import { Product } from '@/types/Product';
 
 export default function Cart() {
     const dispatch = useDispatch();
     const products = useSelector((state: RootState) => state.cart.items);
+    const totalPrice = useSelector((state: RootState) => state.cart.totalPrice);
+    const totalItems = useSelector((state: RootState) => state.cart.totalItems);
+
+
+    const getItem = (product: Product) => {
+        const productFinaly = totalItems.find((item) => {
+            return item.id === product.id;
+        });
+        if (!productFinaly) {
+            return false;
+        }
+        return true;
+    }
+
     return (
         <S.Container>
             <header>
@@ -16,10 +31,6 @@ export default function Cart() {
                     <h2>Carrinho de Compras</h2>
                 </div>
                 <div className="btnClose">
-                    {/* <IoIosCloseCircle
-                        size={20}
-                        className="icon"
-                    /> */}
 
                     <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="19" cy="19" r="19" fill="black" />
@@ -115,7 +126,7 @@ export default function Cart() {
                 <div className="container">
                     <div className="total">
                         <span>Total:</span>
-                        <span>R$798</span>
+                        <span>{`R$${totalPrice}`}</span>
                     </div>
                 </div>
                 <div className="btn">
