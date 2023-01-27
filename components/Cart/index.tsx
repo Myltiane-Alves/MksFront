@@ -3,8 +3,12 @@ import * as S from './styles';
 import { IoIosCloseCircle } from "react-icons/io";
 import { AiOutlineMinus } from "react-icons/ai";
 import { AiOutlinePlus } from "react-icons/ai";
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from '@/services/store';
 
 export default function Cart() {
+    const dispatch = useDispatch();
+    const products = useSelector((state: RootState) => state.cart.items);
     return (
         <S.Container>
             <header>
@@ -121,3 +125,5 @@ export default function Cart() {
         </S.Container>
     )
 }
+
+//como criar sidebar

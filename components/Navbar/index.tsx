@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '@/services/store';
 import { totalPrice } from '@/featuresSlice/cartSlice';
 import { show } from '@/featuresSlice/sidebarCartSlice';
+import classnames from 'classnames';
 
 export const Navbar: React.FC = () => {
     const dispatch = useDispatch();
@@ -60,8 +61,12 @@ export const Navbar: React.FC = () => {
                             <div className="containerCart">
                                 <button
                                     type="button"
+                                    // className={["btnCart", itemAdd ? "itemAdd" : ""].join("")}
+                                    // className={classnames("btnCart", `${itemAdd && 'itemAdd'}`)}
                                     className="btnCart"
-                                    onClick={() => dispatch(show())}
+                                 
+                                    // onClick={() => dispatch(show())}
+                                    onClick={OpenMobileMenu}
                                 >
                                     
                                     <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">

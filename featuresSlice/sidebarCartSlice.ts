@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit"
 const initialState: {view: boolean} = {view: false}
 
 export const sidebarCartSlice = createSlice({
-    name: "cartSidebar",
+    name: "sidebar",
     initialState,
     reducers:{
         show: (state) => {

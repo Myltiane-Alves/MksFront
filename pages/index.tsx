@@ -10,8 +10,8 @@ export default function Home() {
   return (
     <Fragment>
       <Navbar />
+      <Cart />
       <Products />
-      {/* <Cart /> */}
       <Footer/>
     </Fragment>
   )

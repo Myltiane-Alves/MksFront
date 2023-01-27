@@ -8,7 +8,9 @@ export const Container = styled.aside`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
+    position: fixed;
+   
+    transition: 350ms;
     header {
         padding: 36px 0px 0px 47px;
         display: flex;

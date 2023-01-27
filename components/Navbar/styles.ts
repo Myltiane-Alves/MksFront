@@ -103,6 +103,7 @@ export const Content = styled.div`
         }
        
         .containerCart {
+          background-color: red;
           .btnCart {
             /* padding: 1rem 1.87rem; */
             width: 90px;
@@ -112,7 +113,7 @@ export const Content = styled.div`
             transition: filter 0.2s;
             background-color: #ffffff;
             border: none;
-
+            cursor: pointer;
             span {
               font-size: 18px;
               font-weight: 700;
@@ -122,6 +123,10 @@ export const Content = styled.div`
             }
             &:hover {
               filter: brightness(0.9);
+            }
+            .itemAdd{
+              transform: scale(1.1);
+              transition: transform 0.4s ease-in-out;
             }
           }
 
