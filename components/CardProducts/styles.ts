@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.main`
-    background-color: #E5E5E5;
+ 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -49,17 +49,17 @@ export const Card = styled.div`
                 /* line-height: 15px; */
                 text-align: center;
                 width: 100%;
-                font-family: "Montserrat";
+                
             }
         }
 
         .text {
             width: 124px;
-            p {
+            h1 {
                 color: #2C2C2C;
                 font-weight: 400;
                 font-size: 16px;
-                font-family: "Montserrat";
+                font-family: 'Montserrat', sans-serif;
                 line-height: 19px;
                 text-align: left;
             }
@@ -72,10 +72,9 @@ export const Card = styled.div`
         /* height: 25px; */
         padding: 8px 11px 12px 14px;
         p {      
-            color: #2C2C2C;
+            color: #2c2c2c;
             font-weight: 300;
             font-size: 10px;
-            font-family: "Montserrat";
             line-height: 12px;
             text-align: left;
         }

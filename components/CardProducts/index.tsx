@@ -29,9 +29,9 @@ export default function CardProducts({
                 <div className="title">
                     <div className="text">
                     
-                        <p>
+                        <h1>
                             {product.name}
-                        </p>
+                        </h1>
                     </div>
                     <div className="price">
                         <span>

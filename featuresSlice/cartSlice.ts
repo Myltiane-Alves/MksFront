@@ -27,17 +27,21 @@ const cartSlice = createSlice({
             state.totalItems = [...state.totalItems, payload];
             !productFind ? state.items = [...state.items, payload] : "";
         },
-        removeFromCart(){
+        removeFromCart: (state, {payload}) => {
+            state.countItems = state.countItems - 1
+            const productFind = state.totalItems.findIndex((item) => {
+                return item.id === payload.id
+            });
 
+            state.totalItems.splice(productFind, 1);
         },
-        incrementQuantity(){
-
-        },
-        decrementQuantity(){
-
-        },
-        batchRemove(){
-
+        clearCart: (state, {payload}) => {
+            const localItems: Product[] = [...state.totalItems];
+            const newItems: Product[] = [];
+            localItems.forEach((item) => {
+                item.id !== payload.id ? newItems.push(item): state.countItems -= 1;
+            });
+            state.totalItems = newItems;
         },
         totalPrice: (state) =>{
             let totalItemsPrice: number = 0;
@@ -52,9 +56,7 @@ const cartSlice = createSlice({
 export const {
     addToCart,
     removeFromCart,
-    incrementQuantity,
-    decrementQuantity,
-    batchRemove,
+    clearCart,
     totalPrice,
 } = cartSlice.actions;
 

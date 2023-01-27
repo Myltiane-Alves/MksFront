@@ -64,74 +64,32 @@ export const Content = styled.div`
     }
   }
 
-  nav {
-    ul {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 30px;
-
-      li {
-
-        line-height: 22px;
-        list-style: none;
-        span {
-          width: 100px;
-          font-weight: 600;
-          font-family: "Montserrat";
-          color: #fff;
-          font-size: 40px;
-          line-height: 19px;
-        }
-        p {
-          font-weight: 300;
-          font-size: 20px;
-          font-family: "Montserrat";
-          line-height: 19px;
-          color: #fff;
-        }
-
-        a {
-          font-size: 22px;
-          color: #3AB8FB;
-          font-weight: 500;
-          transition: filter 0.2s;
-
-          &:hover {
-            filter: brightness(0.9);
-          }
-        }
-       
-        .containerCart {
-          background-color: red;
-          .btnCart {
-            /* padding: 1rem 1.87rem; */
-            width: 90px;
-            height: 40px;
-            border-radius: 8px;
-            line-height: 10px;
-            transition: filter 0.2s;
-            background-color: #ffffff;
-            border: none;
-            cursor: pointer;
-            span {
-              font-size: 18px;
-              font-weight: 700;
-              color: #000;
-              text-transform: uppercase;
-              padding-left: 15px;
-            }
-            &:hover {
-              filter: brightness(0.9);
-            }
-            .itemAdd{
-              transform: scale(1.1);
-              transition: transform 0.4s ease-in-out;
-            }
-          }
-
-        }
+  .containerCart {
+    .btnCart {
+      /* padding: 1rem 1.87rem; */
+      width: 90px;
+      height: 40px;
+      border-radius: 8px;
+      line-height: 10px;
+      transition: filter 0.2s;
+      background-color: #ffffff;
+      border: none;
+      cursor: pointer;
+      span {
+        font-size: 18px;
+        font-weight: 700;
+        color: #000;
+        text-transform: uppercase;
+        padding-left: 15px;
+      }
+      &:hover {
+        filter: brightness(0.9);
+      }
+      .itemAdd{
+        transform: scale(1.1);
+        transition: transform 0.4s ease-in-out;
       }
     }
+
   }
 `;
