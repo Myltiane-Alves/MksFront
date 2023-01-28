@@ -27,7 +27,7 @@ const cartSlice = createSlice({
             state.totalItems = [...state.totalItems, payload];
             !productFind ? state.items = [...state.items, payload] : "";
         },
-        removeFromCart: (state, {payload}) => {
+        removeFromProduct: (state, {payload}) => {
             state.countItems = state.countItems - 1
             const productFind = state.totalItems.findIndex((item) => {
                 return item.id === payload.id
@@ -55,7 +55,7 @@ const cartSlice = createSlice({
 
 export const {
     addToCart,
-    removeFromCart,
+    removeFromProduct,
     clearCart,
     totalPrice,
 } = cartSlice.actions;

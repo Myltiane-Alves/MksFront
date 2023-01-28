@@ -13,7 +13,7 @@ export const Container = styled.aside`
     justify-content: space-between;
     transition: 350ms;
     header {
-        padding: 25px 0px 10px 32px;
+        padding: 25px 15.08px 10px 32px;
         display: flex;
         justify-content: space-between;
         width: 330px;
@@ -38,6 +38,7 @@ export const Container = styled.aside`
             background-color: transparent;
             cursor: pointer;
             border: none;
+            width: 45px;
             .icon {
                 background-color: #000000;
                 color: #ffffff;
@@ -69,7 +70,7 @@ export const Container = styled.aside`
     }
 
     @media (min-width: 768px) {
-
+        width: 486px;
         header {
             padding: 36px 0px 10px 47px;
             display: flex;

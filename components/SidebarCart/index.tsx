@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '@/services/store';
 import { Product } from '@/types/Product';
 import { hide } from '@/featuresSlice/sidebarCartSlice';
-import { ReactElement } from 'react';
+import { ReactElement, useCallback, useState } from 'react';
 import Cart from '../Cart';
 
 export default function SidebarCart(): ReactElement {
@@ -11,7 +11,11 @@ export default function SidebarCart(): ReactElement {
     const products = useSelector((state: RootState) => state.cart.items);
     const totalPrice = useSelector((state: RootState) => state.cart.totalPrice);
     const totalItems = useSelector((state: RootState) => state.cart.totalItems);
+    const [mobileMenu, setMobileMenu] = useState(false);
 
+    const OpenMobileMenu = useCallback(() => {
+        setMobileMenu(oldValue => !oldValue);
+    }, []);
 
     const getItem = (product: Product) => {
         const productFinaly = totalItems.find((item) => {
@@ -31,7 +35,8 @@ export default function SidebarCart(): ReactElement {
                 </div>
                 <button
                     type="button"
-                    onClick={() => dispatch(hide())}
+                    // onClick={() => dispatch(hide())}
+                    onClick={OpenMobileMenu}
                     className="btnClose"
                 >
 
@@ -43,14 +48,14 @@ export default function SidebarCart(): ReactElement {
 
                 </button>
             </header>
-
+            {mobileMenu && <SidebarCart openMobileMenu={OpenMobileMenu} />}
             <div className="card">
                 {products.map((item: Product) =>
                     getItem(item) ? <Cart product={item} key={item.id} /> : ""
                 )}
             </div>
 
-            <S.Footer>
+            {/* <S.Footer>
                 <div className="container">
                     <div className="total">
                         <span>Total:</span>
@@ -60,7 +65,7 @@ export default function SidebarCart(): ReactElement {
                 <div className="btn">
                     <button>Finalizar Compra</button>
                 </div>
-            </S.Footer>
+            </S.Footer> */}
         </S.Container>
     )
 }
