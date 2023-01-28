@@ -7,11 +7,13 @@ export const Container = styled.aside`
     width: 330px;
     height: 100vh;
     top: 0;
-    right: 0;
+    transition: right 0.5s ease-in-out;
+    right: 0px;
     background-color: #0F52BA;
     z-index: 1;
     justify-content: space-between;
-    transition: 350ms;
+    transition: 350ms; 
+  
     header {
         padding: 25px 15.08px 10px 32px;
         display: flex;
@@ -25,11 +27,9 @@ export const Container = styled.aside`
             h2 {
                 font-size: 27px;
                 font-weight: 700;
-                font-family: "Montserrat";
                 line-height: 32.91px;
                 color: #ffffff;
                 margin: 0;
-                
             }
 
         }
@@ -49,9 +49,6 @@ export const Container = styled.aside`
         display: flex;
         flex-direction: column;
         align-items: center;
-        /* padding-left: 47px; */
-        /* background-color: red; */
-        /* height: 400px; */
         overflow-y: auto;
         padding-bottom: 20px;
     }
@@ -84,7 +81,6 @@ export const Container = styled.aside`
                 h2 {
                     font-size: 27px;
                     font-weight: 700;
-                    font-family: "Montserrat";
                     line-height: 32.91px;
                     color: #ffffff;
                     margin: 0;
@@ -107,9 +103,6 @@ export const Container = styled.aside`
             display: flex;
             flex-direction: column;
             align-items: center;
-            /* padding-left: 47px; */
-            /* background-color: red; */
-            /* height: 400px; */
             overflow-y: auto;
             padding-bottom: 20px;
             height: auto;
@@ -146,17 +139,12 @@ export const Cards = styled.div`
             display: flex;
             margin-left: 42px;
             margin-top: -5px;
-            /* padding-left: 37px; */
             float: left;
-    
         }
         .containerImg {
-            /* display: flex; */
-            /* background-color: #0F52BA; */
             padding: 19px 0px 0px 23px;
             text-align: center;
             .imageProduct {
-        
                 width: 46px;
                 height: 57px;
                 left: 23px;
@@ -167,15 +155,12 @@ export const Cards = styled.div`
             justify-content: space-between;
             align-items: center;
             padding: 14px 11px 8px 14px;
-           
-    
             .text {
                 width: 100px;
                 p {
                     color: #2C2C2C;
                     font-weight: 400;
                     font-size: 13px;
-                    font-family: "Montserrat";
                     line-height: 17px;
                     text-align: left;
                 }
@@ -203,7 +188,6 @@ export const Cards = styled.div`
                 height: 25px;
                 align-self: center;
                 padding: 5px;
-                /* margin-top: 50px; */
                 .btnAdd {
                     background-color: transparent;
                     color: #000000;
@@ -214,8 +198,6 @@ export const Cards = styled.div`
                     width: 20px;
                     height: 20px;
                     padding: 5px;
-                    /* margin: 10px; */
-                    ;
                     cursor: pointer;
                 }
                 .btnMinus {
@@ -228,8 +210,6 @@ export const Cards = styled.div`
                     width: 20px;
                     height: 20px;
                     padding: 5px;
-                    /* margin: 10px; */
-                    ;
                     cursor: pointer;
                 }
             }
@@ -239,7 +219,6 @@ export const Cards = styled.div`
             border-radius: 5px;
             width: 64px;
             height: 26px;
-            /* align-items: center; */
             align-self: center;
             align-items: self-end;
             padding-left: 20px;
@@ -247,10 +226,8 @@ export const Cards = styled.div`
                 color: #000000;
                 font-weight: 700;
                 font-size: 14px;
-                /* line-height: 15px; */
                 text-align: center;
                 width: 100%;
-                font-family: "Montserrat";
             }
         }
     }
@@ -275,7 +252,6 @@ export const Footer = styled.footer`
             }
         }
         .btn {
-            /* margin-top: 42px; */
             background-color: #000000;
             text-align: center;
             height: 65.86px;
@@ -288,7 +264,6 @@ export const Footer = styled.footer`
                 font-size: 20px;
                 line-height: 15px;
                 font-weight: 700;
-                font-family: "Montserrat";
                 color: #ffffff;
                 background-color: #000000;
                 border: none;
@@ -325,7 +300,6 @@ export const Footer = styled.footer`
                 font-size: 28px;
                 line-height: 15px;
                 font-weight: 700;
-                font-family: "Montserrat";
                 color: #ffffff;
                 background-color: #000000;
                 border: none;

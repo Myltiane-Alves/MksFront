@@ -1,6 +1,4 @@
-import Link from 'next/link';
 import * as S from './styles';
-import { RiShoppingBag3Line } from "react-icons/ri";
 import { Product } from '@/types/Product';
 import { ReactElement } from 'react';
 import { useDispatch } from "react-redux";
@@ -44,26 +42,23 @@ export default function CardProducts({
                         {product.description}
                     </p>
                 </div>
-                <div className="containerBtn">
+                
+                <button
+                    type="button"
+                    onClick={() => dispatch(addToCart(product))}
+                >      
                     
+                    <Image 
+                        src={shop}
+                        alt="carrinho para adicionar compra"
+                        className="cart"
+                        width={100}
+                        height={20}
+                    />
                     
-                </div>
-                    <button
-                        type="button"
-                        onClick={() => dispatch(addToCart(product))}
-                    >      
-                       
-                        <Image 
-                            src={shop}
-                            alt="carrinho para adicionar compra"
-                            className="cart"
-                            width={100}
-                            height={20}
-                        />
-                        
-                        <span> Comprar</span> 
-                   
-                    </button>
+                    <span> Comprar</span> 
+                
+                </button>
             </S.Card>
         </S.Container>
     )

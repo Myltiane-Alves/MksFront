@@ -1,14 +1,11 @@
 import styled from 'styled-components'
 
 export const Container = styled.main`
- 
     display: flex;
     flex-direction: column;
     align-items: center;
     height: auto;
     padding: 20px 0px 20px 0px;
-
-   
 `;
 
 export const Card = styled.div`
@@ -18,11 +15,7 @@ export const Card = styled.div`
     width: 217px;
     display: flex;
     flex-direction: column;
-
-    
     .containerImg {
-        /* display: flex; */
-        /* background-color: #0F52BA; */
         padding-top: 18px;
         text-align: center;
         .imageProduct {
@@ -46,7 +39,6 @@ export const Card = styled.div`
                 color: #fff;
                 font-weight: 700;
                 font-size: 15px;
-                /* line-height: 15px; */
                 text-align: center;
                 width: 100%;
                 
@@ -59,7 +51,6 @@ export const Card = styled.div`
                 color: #2C2C2C;
                 font-weight: 400;
                 font-size: 16px;
-                font-family: 'Montserrat', sans-serif;
                 line-height: 19px;
                 text-align: left;
             }
@@ -68,8 +59,6 @@ export const Card = styled.div`
     }
     .description {
         width: 188px;
-        /* background-color: red; */
-        /* height: 25px; */
         padding: 8px 11px 12px 14px;
         p {      
             color: #2c2c2c;
@@ -79,18 +68,6 @@ export const Card = styled.div`
             text-align: left;
         }
 
-    }
-    .containerBtn {
-        background-color: #0F52BA;
-        /* background-color: red; */
-        width: 100%;
-        align-items: center;
-        justify-content: center;
-        display: flex;
-  
-        border-end-end-radius: 8px;
-        border-end-start-radius: 8px;
-        
     }
     button {
         all: unset;

@@ -1,14 +1,11 @@
 import * as S from './styles';
-import { AiOutlineClose, AiOutlineAlignRight } from "react-icons/ai";
 import { useCallback, useEffect, useState } from 'react';
 import Link from 'next/link';
-import { MobileMenu } from './Mobile';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '@/services/store';
 import { totalPrice } from '@/featuresSlice/cartSlice';
-import { show } from '@/featuresSlice/sidebarCartSlice';
-import classnames from 'classnames';
 import SidebarCart from '../SidebarCart';
+
 
 export const Navbar: React.FC = () => {
     const dispatch = useDispatch();
@@ -33,31 +30,21 @@ export const Navbar: React.FC = () => {
         <S.Container>
             <S.Content>
                 <div className="containerLogo">
-                    <Link href="">
+                    <Link href="/">
                         <span>MKS</span>
                     </Link>
-                    <Link href="">
+                    <Link href="/">
                         <p>Sistemas</p>
                     </Link>
                 </div>
-                <button
-                    className="mobileMenu"
-                    type="button"
-                    onClick={OpenMobileMenu}
-                    aria-label="Open Menu"
-                >
-                    <AiOutlineAlignRight size={50} />
-                </button>
-                {mobileMenu && <SidebarCart openMobileMenu={OpenMobileMenu} />}
+              
+                {mobileMenu && <SidebarCart  openMobileMenu={OpenMobileMenu}/>}
                 <div className="containerCart">
                     <button
                         type="button"
-                        // className={["btnCart", itemAdd ? "itemAdd" : ""].join("")}
-                        // className={classnames("btnCart", `${itemAdd && 'itemAdd'}`)}
                         className="btnCart"
-                        
-                        // onClick={() => dispatch(show())}
                         onClick={OpenMobileMenu}
+                       
                     >
                         
                         <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">

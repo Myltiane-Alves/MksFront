@@ -21,11 +21,9 @@ export const Content = styled.div`
     padding-top: 20px;
     display: flex;
     a {
-      font-family: "Montserrat";
       span {
         width: 100px;
         font-weight: 600;
-        font-family: "Montserrat";
         color: #fff;
         font-size: 40px;
         line-height: 19px;
@@ -33,7 +31,6 @@ export const Content = styled.div`
       p {
         font-weight: 300;
         font-size: 20px;
-        font-family: "Montserrat";
         line-height: 19px;
         color: #fff;
         margin: 0;
@@ -43,30 +40,8 @@ export const Content = styled.div`
   }
 
 
-  button.mobileMenu {
-    display: none;
-  }
-
-  @media (max-width: 720px) {
-
-
-    button.mobileMenu {
-      display: flex;
-      padding: 16px;
-      font-size: 32px;
-      color: #fff;
-      border: none;
-      background: transparent;
-    }
-
-    nav {
-      display: none;
-    }
-  }
-
   .containerCart {
     .btnCart {
-      /* padding: 1rem 1.87rem; */
       width: 90px;
       height: 40px;
       border-radius: 8px;
@@ -85,10 +60,10 @@ export const Content = styled.div`
       &:hover {
         filter: brightness(0.9);
       }
-      .itemAdd{
+      /* .itemAdd{
         transform: scale(1.1);
         transition: transform 0.4s ease-in-out;
-      }
+      } */
     }
 
   }

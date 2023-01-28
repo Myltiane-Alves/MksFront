@@ -6,6 +6,7 @@ import { Product } from '@/types/Product';
 import { ReactElement } from 'react';
 import CountItemsById from '@/utils/countItemsById';
 import { addToCart,  removeFromProduct, } from '@/featuresSlice/cartSlice';
+import { formatPrice } from '@/utils/formatPrice';
 
 export default function Cart({
     product
@@ -50,7 +51,8 @@ export default function Cart({
                         </button>
                     </div>
                     <div className="price">
-                        <span>{stringPrice}</span>
+                        {/* <span>{stringPrice}</span> */}
+                        <span>{formatPrice(+product.price)}</span>
                     </div>
 
                 </div>
@@ -75,5 +77,3 @@ export default function Cart({
 
     )
 }
-
-//como criar sidebar

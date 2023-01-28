@@ -8,7 +8,6 @@ export const Container = styled.footer`
         font-weight: 400;
         font-size: 12px;
         line-height: 14.63px;
-        font-family: "Montserrat";
         text-align: center;
         padding-top: 8px;
     }
