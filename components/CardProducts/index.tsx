@@ -46,6 +46,7 @@ export default function CardProducts({
                 <button
                     type="button"
                     onClick={() => dispatch(addToCart(product))}
+                    data-testid="buyButton"
                 >      
                     
                     <Image 
