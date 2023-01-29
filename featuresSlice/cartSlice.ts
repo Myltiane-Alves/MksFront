@@ -1,4 +1,4 @@
-import { Product } from "@/types/Product";
+import { Product } from "../types/Product";
 import { createSlice} from "@reduxjs/toolkit";
 
 const initialState: {

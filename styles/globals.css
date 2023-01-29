@@ -7,6 +7,10 @@ body {
 
 }
 
+.overflow_hide {
+  overflow: hidden;
+}
+
 h1, p, span, a, li {
   font-family: 'Montserrat', sans-serif
 }

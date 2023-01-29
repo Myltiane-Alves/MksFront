@@ -1,5 +1,5 @@
-import api from "@/api/config";
-import { Product } from "@/types/Product";
+import api from "../api/config";
+import { Product } from "../types/Product";
 
 const LoadProducts = async () => {
   const { data }: { data: { products: Product[] } } = await api.get(

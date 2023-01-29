@@ -1,7 +1,7 @@
 
-import cartSlice from "@/featuresSlice/cartSlice";
-import productsSlice from "@/featuresSlice/productsSlice";
-import sidebarCartSlice from "@/featuresSlice/sidebarCartSlice";
+import cartSlice from "../featuresSlice/cartSlice";
+import productsSlice from "../featuresSlice/productsSlice";
+import sidebarCartSlice from "../featuresSlice/sidebarCartSlice";
 import { configureStore } from "@reduxjs/toolkit";
 
 

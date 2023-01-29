@@ -1,9 +1,9 @@
 import * as S from './styles';
-import { useSelector } from "react-redux";
-import { RootState } from '@/services/store';
-import { Product } from '@/types/Product';
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from '../../redux/store';
+import { Product } from '../../types/Product';
 import Cart from '../Cart';
-import { formatPrice } from '@/utils/formatPrice';
+import { formatPrice } from '../../utils/formatPrice';
 interface MobileMenuProps {
     openMobileMenu(): void;
 }
@@ -12,8 +12,7 @@ const  SidebarCart: React.FC<MobileMenuProps> = ({openMobileMenu}) => {
     const products = useSelector((state: RootState) => state.cart.items);
     const totalPrice = useSelector((state: RootState) => state.cart.totalPrice);
     const totalItems = useSelector((state: RootState) => state.cart.totalItems);
-
-
+    
     const getItem = (product: Product) => {
         const productFinaly = totalItems.find((item) => {
             return item.id === product.id;
@@ -23,10 +22,10 @@ const  SidebarCart: React.FC<MobileMenuProps> = ({openMobileMenu}) => {
         }
         return true;
     }    
-
+    
     return (
         <>
-            <S.Container>
+            <S.Container data-testid="sidebarCart">
                 <header>
                     <div className="text">
                         <h2>Carrinho <br /> de Compras</h2>
@@ -34,7 +33,7 @@ const  SidebarCart: React.FC<MobileMenuProps> = ({openMobileMenu}) => {
                     <button
                         onClick={openMobileMenu}
                         className="btnClose"
-                        data-testid="closeSidebar"
+                        data-testid="btnCloseSidebar"
                     >
 
                         <svg 
@@ -58,11 +57,11 @@ const  SidebarCart: React.FC<MobileMenuProps> = ({openMobileMenu}) => {
                         <div className="container">
                             <div className="total">
                                 <span>Total:</span>
-                                <span>{formatPrice(totalPrice)}</span>
+                                <span data-testid="totalPrice">{formatPrice(totalPrice)}</span>
                             </div>
                         </div>
                         <div className="btn">
-                            <button>Finalizar Compra</button>
+                            <button data-testid="buyButton">Finalizar Compra</button>
                         </div>
                     </S.Footer>
             </S.Container>

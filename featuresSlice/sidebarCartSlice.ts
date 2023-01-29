@@ -1,19 +1,9 @@
-import { createSlice } from "@reduxjs/toolkit"
-
-// const initialState = {
-//     isCartOpen: false
-// }
+import { createSlice } from '@reduxjs/toolkit';
 const initialState: {view: boolean} = {view: false}
-export const sidebarCartSlice = createSlice({
+export const sidebarSlice = createSlice({
     name: "sidebar",
     initialState,
-    reducers:{
-        // openCart(state, action) {
-        //     state.isCartOpen = action.payload;
-        // },
-        // toggleCart(state, action) {
-        //     state.isCartOpen = action.payload
-        // },
+    reducers: {
         show: (state) => {
             state.view = true;
         },
@@ -23,6 +13,6 @@ export const sidebarCartSlice = createSlice({
     }
 });
 
-export const { hide, show} = sidebarCartSlice.actions;
+export const {show, hide} = sidebarSlice.actions;
 
-export default sidebarCartSlice.reducer;
+export default sidebarSlice.reducer;

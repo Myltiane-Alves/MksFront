@@ -2,9 +2,10 @@ import * as S from './styles';
 import { useCallback, useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '@/services/store';
-import { totalPrice } from '@/featuresSlice/cartSlice';
+import { RootState } from '../../redux/store';
+import { totalPrice } from '../../featuresSlice/cartSlice';
 import SidebarCart from '../SidebarCart';
+import { show} from 'featuresSlice/sidebarCartSlice';
 
 
 export const Navbar: React.FC = () => {
@@ -16,6 +17,7 @@ export const Navbar: React.FC = () => {
     const OpenMobileMenu = useCallback(() => {
         setMobileMenu(oldValue => !oldValue);
     }, []);
+
 
     useEffect(() => {
         dispatch(totalPrice());

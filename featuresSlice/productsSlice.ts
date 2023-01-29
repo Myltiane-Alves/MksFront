@@ -1,5 +1,5 @@
-import { Product } from "@/types/Product"
-import loadProducts from "@/utils/loadProducts";
+import { Product } from "../types/Product"
+import loadProducts from "../utils/loadProducts";
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 const initialState: {

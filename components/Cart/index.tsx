@@ -2,11 +2,11 @@ import * as S from './styles';
 import { AiOutlineMinus } from "react-icons/ai";
 import { AiOutlinePlus } from "react-icons/ai";
 import { useDispatch } from 'react-redux';
-import { Product } from '@/types/Product';
+import { Product } from '../../types/Product';
 import { ReactElement } from 'react';
-import CountItemsById from '@/utils/countItemsById';
-import { addToCart,  removeFromProduct, } from '@/featuresSlice/cartSlice';
-import { formatPrice } from '@/utils/formatPrice';
+import CountItemsById from '../../utils/countItemsById';
+import { addToCart,  removeFromProduct, } from '../../featuresSlice/cartSlice';
+import { formatPrice } from '../../utils/formatPrice';
 
 export default function Cart({
     product
@@ -42,11 +42,19 @@ export default function Cart({
                 <p>Qtd</p>
                 <div className="containerButton">
                     <div className="contentButton">
-                        <button className="btnMinus" onClick={() => dispatch(removeFromProduct(product))}>
+                        <button 
+                            className="btnMinus"
+                            onClick={() => dispatch(removeFromProduct(product))}
+                            data-testid="btnDecrement"
+                        >
                             <AiOutlineMinus size={12} />
                         </button>
-                        <span>{itemsAmount}</span>
-                        <button className="btnAdd" onClick={() => dispatch(addToCart(product))}>
+                        <span data-testid="amount">{itemsAmount}</span>
+                        <button 
+                            className="btnAdd"
+                            onClick={() => dispatch(addToCart(product))}
+                            data-testid="btnIncrement"
+                        >
                             <AiOutlinePlus size={12} />
                         </button>
                     </div>

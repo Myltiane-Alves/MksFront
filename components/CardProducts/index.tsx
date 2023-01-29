@@ -1,5 +1,5 @@
 import * as S from './styles';
-import { Product } from '@/types/Product';
+import { Product } from '../../types/Product';
 import { ReactElement } from 'react';
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../featuresSlice/cartSlice";

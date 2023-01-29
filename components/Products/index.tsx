@@ -1,5 +1,5 @@
-import { fetchProducts } from "@/featuresSlice/productsSlice";
-import { AppDispatch, RootState } from "@/services/store";
+import { fetchProducts } from "../../featuresSlice/productsSlice";
+import { AppDispatch, RootState } from "../../redux/store";
 import { Fragment, ReactElement, useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import CardProducts from "../CardProducts";
