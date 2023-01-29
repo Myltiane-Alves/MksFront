@@ -90,16 +90,22 @@ describe("Homepage", () => {
         fireEvent.click(decrementButton);
         expect(amount.textContent).toBe("1");
     });
-    
+
     it("", async () => {
-        const amount = await waitFor(() => app.getAllByTestId("amount")[1]);
-        expect(amount).toBeInTheDocument();
-        expect(amount.textContent).toBe("2");
+        const sidebarCart = await waitFor(
+            () => app.getAllByTestId("sibarCart")[1]
+        );
+        expect(sidebarCart).toBeInTheDocument();
+        const amount = await waitFor(
+            () => app.getAllByTestId("sidebarCart")[1]
+        );
+        expect(amount.textContent).toBe("1");
         const decrementButton = await waitFor(
             () => app.getAllByTestId("btnDecrement")[1]
         );
-        expect(decrementButton).toBeInTheDocument();
         fireEvent.click(decrementButton);
-        expect(amount.textContent).toBe("1");
+        expect(sidebarCart).not.toBeInTheDocument();
+        expect(amount).not.toBeInTheDocument();
+        expect(decrementButton).not.toBeInTheDocument();
     })
 })
