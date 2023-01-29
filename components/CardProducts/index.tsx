@@ -15,7 +15,7 @@ export default function CardProducts({
     const stringPrice: string = `R$${Number(product.price).toFixed(0)}`;
 
     return (
-        <S.Container>
+        <S.Container >
             <S.Card>
                 <div className="containerImg">
                     <img

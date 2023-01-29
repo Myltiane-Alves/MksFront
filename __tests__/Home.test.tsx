@@ -107,5 +107,18 @@ describe("Homepage", () => {
         expect(sidebarCart).not.toBeInTheDocument();
         expect(amount).not.toBeInTheDocument();
         expect(decrementButton).not.toBeInTheDocument();
+    });
+
+    it("", async () => {
+        const sidebarCart = await waitFor(
+            () => app.getAllByTestId("sibarCart")[1]
+        );
+        expect(sidebarCart).toBeInTheDocument();
+        const clearButton = await waitFor(
+            () => app.getAllByTestId("removeProduct")
+        );
+        fireEvent.click(clearButton)
+         expect(sidebarCart).not.toBeInTheDocument();
+         expect(clearButton).not.toBeInTheDocument();   
     })
 })
