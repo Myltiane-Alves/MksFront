@@ -32,6 +32,6 @@ axios
     <img src="assets/img/homeCart.png" />
 </div>
 
-<div align-center="center">
+<div align="center">
     <img src="assets/img/mobile.png" />
 </div>
