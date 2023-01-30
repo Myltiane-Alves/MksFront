@@ -8,7 +8,7 @@ import CountItemsById from '../../utils/countItemsById';
 import { addToCart,  removeFromProduct, } from '../../featuresSlice/cartSlice';
 import { formatPrice } from '../../utils/formatPrice';
 
-export default function Cart({
+export default function CartItem({
     product
 }: {
     product: Product;
@@ -18,7 +18,7 @@ export default function Cart({
     const stringPrice: string = `R$${(Number(product.price) * itemsAmount).toFixed(0)}`;
     return (
 
-        <S.Cards >
+        <S.Cards data-testid="sidebarCart">
             <div className="btnClose">
                 <button 
                     type="button"
@@ -59,8 +59,8 @@ export default function Cart({
                         </button>
                     </div>
                     <div className="price">
-                        {/* <span>{stringPrice}</span> */}
-                        <span>{formatPrice(+product.price)}</span>
+                        <span>{stringPrice}</span>
+                        {/* <span>{formatPrice(+product.price)}</span> */}
                     </div>
 
                 </div>

@@ -25,7 +25,7 @@ const  SidebarCart: React.FC<MobileMenuProps> = ({openMobileMenu}) => {
     
     return (
         <>
-            <S.Container data-testid="sidebarCart">
+            <S.Container data-testid="sidebar">
                 <header>
                     <div className="text">
                         <h2>Carrinho <br /> de Compras</h2>
@@ -61,7 +61,7 @@ const  SidebarCart: React.FC<MobileMenuProps> = ({openMobileMenu}) => {
                             </div>
                         </div>
                         <div className="btn">
-                            <button data-testid="buyButton">Finalizar Compra</button>
+                            <button >Finalizar Compra</button>
                         </div>
                     </S.Footer>
             </S.Container>
