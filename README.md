@@ -22,3 +22,16 @@ Redux toolkit
 Styled-components
 Jest
 axios
+
+
+<div align="center">
+    <img src="assets/img/home.png" />
+</div>
+
+<div align="center">
+    <img src="assets/img/homeCart.png" />
+</div>
+
+<div align-center="center">
+    <img src="assets/img/mobile.png" />
+</div>
