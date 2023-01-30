@@ -16,14 +16,15 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 Tecnologias utilizadas:
 
-Next.js
-TypeScript
-Redux toolkit
-Styled-components
-Jest
+Next.js<br/>
+TypeScript<br/>
+Redux toolkit<br/>
+Styled-components<br/>
+Jest<br/>
 axios
 
-
+## Link do projeto
+https://mks-front.vercel.app/
 <div align="center">
     <img src="assets/img/home.png" />
 </div>
