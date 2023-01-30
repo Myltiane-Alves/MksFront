@@ -6,7 +6,7 @@ import { Product } from '../../types/Product';
 import { ReactElement } from 'react';
 import CountItemsById from '../../utils/countItemsById';
 import { addToCart,  removeFromProduct, } from '../../featuresSlice/cartSlice';
-import { formatPrice } from '../../utils/formatPrice';
+// import { formatPrice } from '../../utils/formatPrice';
 
 export default function CartItem({
     product
@@ -18,7 +18,7 @@ export default function CartItem({
     const stringPrice: string = `R$${(Number(product.price) * itemsAmount).toFixed(0)}`;
     return (
 
-        <S.Cards data-testid="sidebarCart">
+        <S.Cards data-testid="cartItem">
             <div className="btnClose">
                 <button 
                     type="button"

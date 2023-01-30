@@ -40,7 +40,7 @@ export const Content = styled.div`
   }
 
 
-  .containerCart {
+
     .btnCart {
       width: 90px;
       height: 40px;
@@ -64,7 +64,7 @@ export const Content = styled.div`
         transform: scale(1.1);
         transition: transform 0.4s ease-in-out;
       } */
-    }
+    
 
   }
 `;

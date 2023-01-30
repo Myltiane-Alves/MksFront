@@ -19,52 +19,52 @@ describe("Homepage", () => {
     });
 
 
-    // it("should increase the amount of items by pressing the button", async () => { 
-    //     // const countItems = await app.findAllByTestId("countItems");
-    //     const countItems = await app.findByTestId("countItems")
-    //     const buyButton = await waitFor(() => app.getAllByTestId("buyButton")[0]);
-    //     expect(countItems).toBeInTheDocument();
+    it("should increase the amount of items by pressing the button", async () => { 
+        // const countItems = await app.findAllByTestId("countItems");
+        const countItems = await app.findByTestId("countItems")
+        const buyButton = await waitFor(() => app.getAllByTestId("buyButton")[0]);
+        expect(countItems).toBeInTheDocument();
 
-    //     expect(Number(countItems.textContent)).toBe(0);
-    //     expect(buyButton).toBeInTheDocument();
+        expect(Number(countItems.textContent)).toBe(0);
+        expect(buyButton).toBeInTheDocument();
         
-    //     fireEvent.click(buyButton);
-    //     expect(Number(countItems.textContent)).toBe(1);
-    // });
-
-    // it("Should render a sidebar on click on cart button", async () => {     
-    //     const btnCart = await app.findByTestId("btnCart")
-        
-    //     fireEvent.click(btnCart);
-
-    //     const sidebarCart = await app.findByTestId("sidebarCart")
-    //     expect(sidebarCart).toBeInTheDocument();
-    // });
-
-    // it("Should unmount sidebar when click close button", async () => { 
-      
-    //     const btnCart = await app.findByTestId("btnCart")
-        
-    //     fireEvent.click(btnCart);
-    //     const sidebarCart = await app.findByTestId("sidebarCart")
-    //     const btnCloseSidebar = await app.findByTestId("btnCloseSidebar")
-    //     fireEvent.click(btnCloseSidebar);
-
-    //     expect(sidebarCart).not.toBeInTheDocument();
-    // });
-
-    it("Should render a sidebar item when triggering the buy button", async () => { 
-      
-        const btnCart = await app.findByTestId("btnCart")
-        fireEvent.click(btnCart);
-        const buyButton = await waitFor(() => app.getByTestId("buyButton"));
         fireEvent.click(buyButton);
-        const cartItem = await waitFor(
-            () => app.getAllByTestId("sidebarCart")[1]
-        );
-
-        expect(cartItem).toBeInTheDocument();
+        expect(Number(countItems.textContent)).toBe(1);
     });
+
+    it("Should render a sidebar on click on cart button", async () => {     
+        const btnCart = await app.findByTestId("buttonCart")
+        
+        fireEvent.click(btnCart);
+
+        const sidebarCart = await app.findByTestId("cartItem")
+        expect(sidebarCart).toBeInTheDocument();
+    });
+
+    it("Should unmount sidebar when click close button", async () => { 
+      
+        const btnCart = await app.findByTestId("buttonCart")
+        
+        fireEvent.click(btnCart);
+        const sidebarCart = await app.findByTestId("cartItem")
+        const btnCloseSidebar = await app.findByTestId("btnCloseSidebar")
+        fireEvent.click(btnCloseSidebar);
+
+        expect(sidebarCart).not.toBeInTheDocument();
+    });
+
+
+
+    // it("Should render a sidebar Item when fire the buy button", async () => {
+    //     const btnCart = await app.findByTestId("buttonCart");
+    //     fireEvent.click(btnCart);
+    //     const buyButton = await waitFor(() => app.getAllByTestId("buyButton")[1]);
+    //     fireEvent.click(buyButton);
+    //     const cartItem = await waitFor(
+    //       () => app.getAllByTestId("cartItem")[1]
+    //     );
+    //     expect(cartItem).not.toBeInTheDocument()
+    // });
 
     // it("shoud increment the amount of items by pressing the increment button", async () => {
     //     const amount = await waitFor(() => app.getAllByTestId("amount")[1]);

@@ -2,8 +2,8 @@ import * as S from './styles';
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from '../../redux/store';
 import { Product } from '../../types/Product';
-import Cart from '../Cart';
 import { formatPrice } from '../../utils/formatPrice';
+import Cart from '../Cart';
 interface MobileMenuProps {
     openMobileMenu(): void;
 }

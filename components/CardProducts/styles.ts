@@ -72,17 +72,17 @@ export const Card = styled.div`
     button {
         all: unset;
         cursor: pointer;
-        padding: 14px 0px;
         gap: 22.4px;
         background-color: #0F52BA;
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100%;
+        height: 36px;
         border-radius: 0px 0px 8px 8px;
         border: none;
         font-weight: 600;
-        font-size: 14px;
+        font-size: 16px;
         line-height: 28px;
         text-transform: uppercase;
         color: #ffffff;
