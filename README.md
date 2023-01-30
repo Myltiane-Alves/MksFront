@@ -27,10 +27,13 @@ axios
 <div align="center">
     <img src="assets/img/home.png" />
 </div>
+<br/>
 
 <div align="center">
     <img src="assets/img/homeCart.png" />
 </div>
+
+<br/>
 
 <div align="center">
     <img src="assets/img/mobile.png" />
